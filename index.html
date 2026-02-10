@@ -1,38 +1,39 @@
-<!-- ================= index.html ================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+const welcomePage = document.getElementById("welcomePage");
+const mainPage = document.getElementById("mainPage");
 
-<!-- ===== WELCOME PAGE ===== -->
-<div id="welcomePage">
-    <h1>WELCOME</h1>
-    <p class="team">Created by Team NEXA</p>
+const loginForm = document.getElementById("loginForm");
+const message = document.getElementById("message");
+const exitBtn = document.getElementById("exitBtn");
 
-    <div class="login-box">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p id="message"></p>
-    </div>
-</div>
+const users = [
+    { username: "Teja", password: "3913" },
+    { username: "Abhinav", password: "3953" },
+    { username: "Praneeth", password: "3934" }
+];
 
-<!-- ===== MAIN PAGE ===== -->
-<div id="mainPage">
-    <div class="page">
-        <h1>WELCOME TEAM "NEXA"</h1>
-        <button id="exitBtn">Exit</button>
-    </div>
-</div>
+// Login
+loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-<script src="script.js"></script>
-</body>
-</html>
+    const u = username.value;
+    const p = password.value;
+
+    const valid = users.some(user => user.username === u && user.password === p);
+
+    if (valid) {
+        welcomePage.style.display = "none";
+        mainPage.style.display = "block";
+        message.innerText = "";
+    } else {
+        message.innerText = "Invalid login details";
+    }
+});
+
+// Exit
+exitBtn.addEventListener("click", function () {
+    mainPage.style.display = "none";
+    welcomePage.style.display = "flex";
+    loginForm.reset();
+});
+
+
