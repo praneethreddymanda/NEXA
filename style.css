@@ -1,4 +1,3 @@
-/* ================= style.css ================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,55 +7,70 @@
 
 body {
     background: #e0e0e0;
-    text-align: center;
-    padding: 30px;
+    min-height: 100vh;
 }
 
-/* Welcome page */
-#welcomePage h1 {
+/* Center pages */
+.center-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Titles */
+.main-title {
     font-size: 36px;
     color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .team {
+    color: #666;
     margin-bottom: 30px;
-    color: #555;
 }
 
 /* Login box */
 .login-box {
-    background: #f5f5f5;
-    width: 280px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
+    background: #ffffff;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
 }
 
 .login-box h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background: #666;
+    background: #555;
     color: white;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 button:hover {
-    background: #444;
+    background: #333;
 }
 
 #message {
-    margin-top: 8px;
+    margin-top: 10px;
     color: red;
 }
 
@@ -65,68 +79,49 @@ button:hover {
     display: none;
 }
 
-/* Page container with double border */
+/* Page container */
 .page {
-    width: 80%;
-    margin: 40px auto;
-    padding: 40px;
+    max-width: 800px;
+    margin: 60px auto;
     background: #f7f7f7;
+    padding: 40px;
     border: 3px solid black;
     outline: 6px solid #cfcfcf;
     outline-offset: -12px;
+    text-align: center;
 }
 
-.page h1 {
+/* Content text */
+.content-text {
+    font-size: 17px;
     color: #333;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #222;
 }
 
 /* Exit button */
 #exitBtn {
-    width: 120px;
     margin-top: 30px;
+    width: 120px;
 }
-/* NEW */
-/* ===== MOBILE RESPONSIVE ===== */
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-
-    body {
-        padding: 15px;
+    .main-title {
+        font-size: 26px;
     }
 
-    /* Welcome text */
-    #welcomePage h1 {
-        font-size: 28px;
-    }
-
-    .team {
-        font-size: 14px;
-    }
-
-    /* Login box */
     .login-box {
-        width: 100%;
-        max-width: 320px;
-        padding: 15px;
+        width: 90%;
     }
 
-    /* Main page container */
     .page {
-        width: 100%;
-        padding: 20px;
-        margin: 20px auto;
-    }
-
-    .page h1 {
-        font-size: 24px;
-    }
-
-    /* Buttons */
-    button {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    #exitBtn {
-        width: 100%;
+        margin: 20px;
+        padding: 25px;
     }
 }
