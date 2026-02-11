@@ -1,61 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXA</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXA</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+    <div class="logo-container">
+        <img src="NEXA_circle_logo.png" alt="Team NEXA Logo" class="logo">
+    </div>
+
+    <div class="nav-links">
+        <div class="nav-item" onclick="showHome()">🏠 Home</div>
+        <div class="nav-item" onclick="showAbout()">ℹ️ About</div>
+        <div class="nav-item" onclick="showContact()">📞 Contact Us</div>
+    </div>
+</nav>
+
 <!-- ===== WELCOME PAGE ===== -->
 <div id="welcomePage" class="center-page">
-    <h1 class="main-title">WELCOME</h1>
+
+    <img src="NEXA_circle_logo.png" alt="Team NEXA Logo" class="welcome-logo">
+
+    <h1>WELCOME</h1>
     <p class="team">Created by Team NEXA</p>
 
     <div class="login-box">
         <h2>Login</h2>
-
         <form id="loginForm">
             <input type="text" id="username" placeholder="Username" required>
             <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
-
         <p id="message"></p>
     </div>
 </div>
 
 <!-- ===== MAIN PAGE ===== -->
-<div id="mainPage">
-    <div class="page">
+<div id="mainPage" class="content-page">
+    <h1>WELCOME TEAM NEXA</h1>
+    <p>This platform is developed as a professional web project demonstration.</p>
+</div>
 
-        <h1 class="main-title">WELCOME TEAM NEXA</h1>
+<!-- ===== ABOUT PAGE ===== -->
+<div id="aboutPage" class="content-page">
+    <h1>About Us</h1>
+    <p><strong>M.PRANEETH REDDY</strong></p>
+    <p><strong>DERANGULA TEJA</strong></p>
+    <p><strong>S.ABHINAV REDDY</strong></p>
+    <p>We are students at VNRVJIET College.</p>
+</div>
 
-        <p class="content-text">
-            This platform is developed by <strong>Team NEXA</strong> as a learning-based web project.
-            The main objective of this website is to understand and implement core concepts of
-            modern web development in a simple and effective manner.
-        </p>
+<!-- ===== CONTACT PAGE ===== -->
+<div id="contactPage" class="content-page">
+    <h1>Contact Us</h1>
 
-        <p class="content-text">
-            The site demonstrates essential features such as user authentication,
-            smooth page navigation, and a responsive design that works consistently
-            across mobile phones, tablets, and desktop devices.
-        </p>
+    <div class="card">
+        <h3>M.PRANEETH REDDY</h3>
+        <p>Mobile: 9052584340</p>
+        <p>Email: praneethreddymanda07@gmail.com</p>
+    </div>
 
-        <p class="content-text highlight">
-            This project serves as a strong foundation for building advanced
-            real-world web applications.
-        </p>
+    <div class="card">
+        <h3>DERANGULA TEJA</h3>
+        <p>Mobile: 9440778451</p>
+        <p>Email: tejaderangula51@gmail.com</p>
+    </div>
 
-        <button id="exitBtn">Exit</button>
+    <div class="card">
+        <h3>S.ABHINAV REDDY</h3>
+        <p>Mobile: 7989240302</p>
+        <p>Email: abhinavreddysarugari@gmail.com</p>
     </div>
 </div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    © 2026 Team NEXA | All Rights Reserved
+</footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
