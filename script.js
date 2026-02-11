@@ -1,9 +1,10 @@
 const welcomePage = document.getElementById("welcomePage");
 const mainPage = document.getElementById("mainPage");
+const aboutPage = document.getElementById("aboutPage");
+const contactPage = document.getElementById("contactPage");
 
 const loginForm = document.getElementById("loginForm");
 const message = document.getElementById("message");
-const exitBtn = document.getElementById("exitBtn");
 
 const users = [
     { username: "Teja", password: "3913" },
@@ -23,15 +24,30 @@ loginForm.addEventListener("submit", function (e) {
     if (valid) {
         welcomePage.style.display = "none";
         mainPage.style.display = "block";
+        aboutPage.style.display = "none";
+        contactPage.style.display = "none";
         message.innerText = "";
     } else {
         message.innerText = "Invalid login details";
     }
 });
 
-// Exit
-exitBtn.addEventListener("click", function () {
+// Navigation functions
+function showHome() {
+    mainPage.style.display = "block";
+    aboutPage.style.display = "none";
+    contactPage.style.display = "none";
+}
+
+function showAbout() {
     mainPage.style.display = "none";
-    welcomePage.style.display = "flex";
-    loginForm.reset();
-});
+    aboutPage.style.display = "block";
+    contactPage.style.display = "none";
+}
+
+function showContact() {
+    mainPage.style.display = "none";
+    aboutPage.style.display = "none";
+    contactPage.style.display = "block";
+}
+
